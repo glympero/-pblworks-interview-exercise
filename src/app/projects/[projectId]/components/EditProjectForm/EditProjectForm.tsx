@@ -42,7 +42,6 @@ export const EditProjectForm = ({ project }: { project: Project }) => {
 
   return (
     <Paper sx={{ padding: 2 }}>
-      <Typography variant="h2">{title || 'Untitled Project'}</Typography>
       <Grid container spacing={2} sx={{ mb: 2, mt: 2 }}>
         <Grid item xs={12} md={5} lg={4}>
           <TextField
