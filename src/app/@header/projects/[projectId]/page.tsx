@@ -11,7 +11,7 @@ export default async function ProjectHeaderPage({
   try {
     const project = await getProjectById(params.projectId)
     if (project) {
-      title = project.title ?? 'Untitled Project'
+      title = project.title || 'Untitled Project'
     }
   } catch (error) {
     console.error('Header fetch failed:', error)
