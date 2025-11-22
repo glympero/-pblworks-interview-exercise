@@ -1,6 +1,6 @@
-import { EditProjectForm } from '@/app/projects/[projectId]/components/EditProjectForm/EditProjectForm'
 import { notFound } from 'next/navigation'
 import { getProjectById } from './actions/get-project-by-id'
+import { EditProjectWrapper } from '@/app/projects/[projectId]/components/EditProjectWrapper/EditProjectWrapper'
 
 export default async function Page({
   params,
@@ -13,5 +13,5 @@ export default async function Page({
     return notFound()
   }
 
-  return <EditProjectForm project={project} />
+  return <EditProjectWrapper project={project} />
 }

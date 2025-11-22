@@ -4,6 +4,7 @@ import { ThemeProvider } from '@mui/material/styles'
 import theme from '@/theme'
 import CssBaseline from '@mui/material/CssBaseline'
 import Box from '@mui/material/Box'
+import { GlobalNavigationHandler } from '@/app/components/GlobalNavigationHandler/GlobalNavigationHandler'
 
 export const metadata: Metadata = {
   title: 'PBLWorks Author',
@@ -24,7 +25,7 @@ export default function RootLayout({
             <CssBaseline />
             {header}
             <Box component="main" sx={{ p: 2 }}>
-              {children}
+              <GlobalNavigationHandler>{children}</GlobalNavigationHandler>
             </Box>
           </ThemeProvider>
         </AppRouterCacheProvider>
